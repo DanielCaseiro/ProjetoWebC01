@@ -1,0 +1,19 @@
+
+
+
+.inter-variable {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: ; /* <weight>: Use a value from 100 to 900 */
+    font-style: normal; 
+  }
+
+  
+
+  
+.jura-variable {
+    font-family: "Jura", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: ; /* <weight>: Use a value from 300 to 700 */
+    font-style: normal;
+  }
