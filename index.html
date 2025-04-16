@@ -22,29 +22,27 @@
 
     <!-- navbar do bootstrap -->
 
-    <div>
+    <!-- faltam os links dos botões para as outras páginas! -->
 
-    <nav class="navbar navbar-expand-lg bg-transparent fixed-top">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-transparent py-3" style="background: none; position: absolute; width: 100%; z-index: 2;"> <!-- usar o style="background: none" foi a única maneira que encontrei de deixar a navbar sobreposta à imagem da Hero section; py-3 ajusta a posição em relação ao topo da pagina; p é de padding, y é de eixo y (vertical) e corresponde a um padding-top + padding-bottom -->
+        <div class="container-fluid justify-content-end"> <!-- justify-content-end mantem o conteúdo alinhado à direita -->
           
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto d-flex flex-row gap-4"> <!-- gap-4 define um espaço determinado entre os elementos filhos dentro do flex container (equivalente ao gap no css); ms-auto (margin-start auto) também mantém o conteúdo alinhado à direta ao ocupar todo o espaço disponível a partir da margem esquerda (reduntante?) -->
             <li class="nav-item">
-              <a class="nav-link text-dark" href="#">Acomodação</a>
+              <a class="nav-link text-dark px-3" href="#">Acomodação</a> <!-- px (semelhante ao py) corresponde a padding no eixo horizontal, e equivale a um padding-left + padding-right -->
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark" href="#">Locais</a>
+              <a class="nav-link text-dark px-3" href="#">Locais</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark" href="#">Blog</a>
+              <a class="nav-link text-dark px-3" href="#">Blog</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Contatos</a>
+                <a class="nav-link text-dark px-3" href="#">Contatos</a>
               </li>
           </ul>
         </div>
       </nav>
-
-    </div>
 
     <!-- Hero section --> 
 
@@ -60,6 +58,16 @@
 
   <section class="content-section">
     <h2>Projects</h2>
+    <p>Project details...</p>
+  </section>
+
+  <section class="content-section">
+    <h2>Parte 3</h2>
+    <p>Project details...</p>
+  </section>
+
+  <section class="content-section">
+    <h2>Parte 4</h2>
     <p>Project details...</p>
   </section>
       
