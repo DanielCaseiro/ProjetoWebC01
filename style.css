@@ -1,19 +1,56 @@
 
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
 
+
+
+.navbar {
+
+    font-family: "Jura", sans-serif !important;
+}
+
+.hero-section {
+    height: 100vh; /* 100% do viewport height */
+    background-image: url('Imagens/Hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-section h1 {
+    font-family: "Josefin Slab", serif;
+    font-weight: 700;
+    font-size: 85px;
+    line-height: 1;
+    letter-spacing: 0em;
+    color: white; 
+  }
+  
+  .content-section {
+    padding: 80px 20px;
+    background-color: #f5f5f5;
+  }
+
+/* variantes das fontes */
 
 .inter-variable {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: ; /* <weight>: Use a value from 100 to 900 */
+    font-weight: 400; /* <weight>: Use a value from 100 to 900 */
     font-style: normal; 
   }
 
-  
-
-  
 .jura-variable {
     font-family: "Jura", sans-serif;
     font-optical-sizing: auto;
-    font-weight: ; /* <weight>: Use a value from 300 to 700 */
+    font-weight: 500; /* <weight>: Use a value from 300 to 700 */
     font-style: normal;
   }
