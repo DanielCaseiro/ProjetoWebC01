@@ -53,21 +53,39 @@
     display: flex;
   }
 
-  .section02-right-half{
+  .section02-metade-esquerda{
     width: 50%; /* faz essa div ocupar metade da felxbox */
-    display: flex;
-    align-items: center; 
-    justify-content: center;
+    display: grid;
+    place-items: center;
+    padding: 2vw;
   }
 
-  .section02-left-half{
+  .section02-metade-esquerda-texto{
+    font-family: "Jura",sans-serif;
+    font-weight: 400;
+    font-size: clamp(28px, 2.5vw, 45px); /* clamp para dar maior responsividade */
+    line-height: 1.2;
+    letter-spacing: 0.2em;
+  }
+
+  .section02-metade-esquerda-texto-destaque {
+    font-weight: 700;
+    color: #686931;
+  }
+
+  .section02-metade-direita{
     width: 50%; /* faz essa div ocupar a outra metade da felxbox */
     display: flex;
     align-items: center; 
     justify-content: center;
   }
-  
 
+  .section02-divisoria {
+    width: 1px;
+    background-color: black;
+    height: 60%;
+    align-self: center;
+}
 
   .content-section {
     padding: 80px 20px;
@@ -90,3 +108,28 @@
     font-weight: 500; /* <weight>: Use a value from 300 to 700 */
     font-style: normal;
   }
+
+  /* media query*/
+
+  @media (max-width: 768px) {
+    .section02 {
+        flex-direction: column;
+    }
+
+    .section02-divisoria {
+        width: 60%;
+        height: 1px;
+        margin: 20px 0;
+    }
+}
+
+/*Notas:
+
+Unit | Meaning | Good For
+vw | 1% of viewport width | Horizontal padding, font-scaling
+vh | 1% of viewport height | Hero section height, vertical gaps
+% | 1% of parent element size | Flexible grids, children layout
+rem | Root element font size multiplier | Spacing, typography (accessibility)
+em | Current element font size | Local scaling inside components
+
+*/
