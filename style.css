@@ -304,6 +304,43 @@ footer{
 }
 
 
+/* Página 2: Contatos */
+
+.contatos{
+  height: 100vh; /* 100% do viewport height */
+    background-image: url('Imagens/pexels-jeremy-bishop-1260133-20146347\ 2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.contatos::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  z-index: 1;
+}
+
+.contatos-metade-esquerda{
+  flex: 1;
+  max-width: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.contatos-metade-direita{
+  flex: 1;
+  max-width: 50%;
+  position: relative;
+  z-index: 2;
+}
+
 /* variantes das fontes */
 
 .inter-variable {
