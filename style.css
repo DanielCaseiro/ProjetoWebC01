@@ -341,6 +341,17 @@ footer{
   z-index: 2;
 }
 
+.contatos-texto-1 {
+  position: absolute;
+}
+
+@media (min-width: 1200px) {
+  .contatos-texto-1 {
+    top: -180px;
+    left: 350px;
+  }
+}
+
 /* variantes das fontes */
 
 .inter-variable {
