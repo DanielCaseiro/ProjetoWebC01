@@ -22,7 +22,7 @@
     background-color: transparent !important;
   }
 
-  
+    /* Hero Section */
 
 .hero-section {
     height: 100vh; /* 100% do viewport height */
@@ -46,11 +46,15 @@
     color: white; 
   }
 
+  /* Section 02 */
+
   .section02{
     background-color:#B49B2C40;
     width: 100%;
     height: 570px;
     display: flex;
+    align-items: center;
+    padding: 0 2vw;
   }
 
   .section02-metade-esquerda{
@@ -73,13 +77,6 @@
     color: #686931;
   }
 
-  .section02-metade-direita{
-    width: 50%; /* faz essa div ocupar a outra metade da felxbox */
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-  }
-
   .section02-divisoria {
     width: 1px;
     background-color: black;
@@ -87,11 +84,91 @@
     align-self: center;
 }
 
-  .content-section {
-    padding: 80px 20px;
-    padding-top: 120px;
-    background-color: #f5f5f5;
+.section02-metade-direita {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+}
+
+.remote-work-section {
+  position: relative; /* Keep this - the corners will be relative to this */
+  text-align: center;
+  padding: 40px 30px;
+  background-color: transparent;
+  height: fit-content;
+}
+
+.section-title {
+  font-family: "Jura", sans-serif;
+  font-size: clamp(24px, 2vw, 32px);
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.job-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.job-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Jura", sans-serif;
+  font-size: clamp(16px, 1.2vw, 20px);
+  text-align: left;
+  line-height: 2;
+}
+
+.corner {
+  width: 40px;
+  height: 40px;
+  border: solid black;
+  position: absolute; /* Keep this */
+}
+
+.corner-top-left {
+  top: -10px; /* Adjust to move it slightly outside the padding */
+  left: -10px; /* Adjust to move it slightly outside the padding */
+  border-width: 0 0 8px 8px;
+}
+
+.corner-bottom-right {
+  bottom: -10px; /* Adjust to move it slightly outside the padding */
+  right: -10px; /* Adjust to move it slightly outside the padding */
+  border-width: 8px 8px 0 0;
+}
+ 
+  /* Section 03 */
+
+  .section03{
+    width: 100%;
+    height: 440px;
+    display: flex;
+    background-color: black;
   }
+
+  .section03-metade-esquerda{
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .section03-metade-esquerda img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .section03-metade-direita {
+    color: white;
+  }
+
+
+
 
 /* variantes das fontes */
 
