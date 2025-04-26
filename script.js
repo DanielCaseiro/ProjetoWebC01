@@ -32,3 +32,53 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+
+
+  /* opções de cidade do formulário da página Locais */
+
+  function updateCities() {
+    const country = document.getElementById("country").value;
+    const citySelect = document.getElementById("city");
+
+   
+    citySelect.innerHTML = '<option selected disabled value="">cidade</option>';
+
+    let cities = [];
+
+    if (country === "br") {
+        cities = ["São Paulo", "Rio de Janeiro", "Brasília"];
+    } else if (country === "pt") {
+        cities = ["Lisboa", "Porto", "Faro"];
+    } else if (country === "us") {
+        cities = ["New York", "Los Angeles", "Miami"];
+    }
+
+
+    if (cities.length === 0) {
+        citySelect.disabled = true;
+    } else {
+        citySelect.disabled = false;
+        cities.forEach(function(city) {
+            const option = document.createElement("option");
+            option.value = city.toLowerCase().replace(/\s+/g, "-");
+            option.textContent = city;
+            citySelect.appendChild(option);
+        });
+    }
+}
+
+  /* mostrar o mapa da página Locais, opção Porto */
+
+function showMapSection() {
+  const country = document.getElementById("country").value;
+  const city = document.getElementById("city").value;
+
+  const mapSection = document.getElementById("mapSection");
+
+  if (country === "pt" && city.includes("porto")) {
+      mapSection.style.display = "block"; // Show the map div
+  } else {
+      mapSection.style.display = "none";
+      alert("Por favor selecione Portugal e Porto para ver o mapa.");
+  }
+}

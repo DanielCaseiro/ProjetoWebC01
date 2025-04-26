@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contatos</title>
-    
+    <title>Blog</title>
+
     <!-- link fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jura:wght@300..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Jura:wght@300..700&display=swap" rel="stylesheet">
-
 
     <!-- link bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
@@ -20,10 +19,10 @@
 </head>
 <body>
 
-  <header>
+    <header>
 
-<!-- ------------------------- Navbar ------------------------- -->
-
+    <!-- ------------------------- Navbar ------------------------- -->
+ 
 
     <nav class="navbar navbar-expand-lg bg-transparent py-3" style="background: none; position: absolute; width: 100%; z-index: 5;"> <!-- usar o style="background: none" foi a única maneira que encontrei de deixar a navbar sobreposta à imagem da Hero section; py-3 ajusta a posição em relação ao topo da pagina; p é de padding, y é de eixo y (vertical) e corresponde a um padding-top + padding-bottom -->
         <div class="container-fluid justify-content-end"> <!-- justify-content-end mantem o conteúdo alinhado à direita -->
@@ -56,93 +55,55 @@
 
     <main>
 
-<!-- ------------------------- Contatos 01 ------------------------- -->
+      <!-- ------------------------- Blog 01 ------------------------- -->
 
-    <section class="contatos d-flex align-items-center justify-content-center text-white"> <!-- d-flex: define como flex container -->
 
-        <div class="contatos-metade-esquerda">
+        <section class="blog01">
 
-          <div class="container-formulario">
-
-            <form action="processa.php" method="POST">
-                <h2>Entre em contacto comigo:</h2>
-                <div class="formularioLinha">
-                    <div class="formularioGrupo">
-                      <label for="nome">Nome</label>
-                      <input type="text" id="nome" name="nome" placeholder="João">
-                    </div>
-                    <div class="formularioGrupo">
-                      <label for="sobrenome">Apelido/Sobrenome</label>
-                      <input type="text" id="sobrenome" name="sobrenome" placeholder="Silva">
-                    </div>
-                  </div>
-              
-                  <div class="formularioGrupo">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="nome@email.net">
-                  </div>
-              
-                  <div class="formularioGrupo">
-                    <label for="mensagem">Sua mensagem</label>
-                    <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui"></textarea>
-                  </div>
-              
-                  <input type="enviar" value="Enviar">
-                </form>
-            </form>
-        
+            <div class="blog01-div01">
+                <p class="blog01-div01-texto">Página em construção</p>
             </div>
-            
+      
+        </section>
 
-        </div>
-       
-        <div class="contatos-metade-direita">
-            <div class="contatos-texto-1">
-                <p>"Viajar é descobrir que todos estão</p>
-                <p>errados sobre outros países."</p>
-                <p>- Aldous Huxley</p>
-            </div>
-            
-        </div>
-        
-    </section>
 
-  </main>
 
- <!-- ------------------------- Footer ------------------------- -->
- 
+    </main>
+
+    <!-- ------------------------- Footer ------------------------- -->
+      
   <footer>
 
-  <div class="footer-texto-1">
-    <p>LIVING AROUND</p>
-  </div>
-
-    <!-- Icones de Redes Sociais -->
-
-    <div class="social-icons">
-      <a href="https://facebook.com/yourprofile" target="_blank" class="social-icon">
-        <img src="Imagens/Icones/FacebookIcon.svg" alt="Facebook" />
-      </a>
-  
-      <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon">
-        <img src="Imagens/Icones/InstagramIcon.svg" alt="Instagram" />
-      </a>
-  
-      <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-icon">
-        <img src="Imagens/Icones/XIcon.svg" alt="X" />
-      </a>
+    <div class="footer-texto-1">
+      <p>LIVING AROUND</p>
     </div>
 
+      <!-- Icones de Redes Sociais -->
 
-  <div class="footer-texto-2">
-    <p>Power by Cesae Digital</p>
-  </div>
+      <div class="social-icons">
+        <a href="https://facebook.com/yourprofile" target="_blank" class="social-icon">
+          <img src="Imagens/Icones/FacebookIcon.svg" alt="Facebook" />
+        </a>
+    
+        <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon">
+          <img src="Imagens/Icones/InstagramIcon.svg" alt="Instagram" />
+        </a>
+    
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-icon">
+          <img src="Imagens/Icones/XIcon.svg" alt="X" />
+        </a>
+      </div>
 
-  </footer>
 
-<!-- -------------------------------------------------- -->
+    <div class="footer-texto-2">
+      <p>Power by Cesae Digital</p>
+    </div>
 
-<!-- link bootstrap js -->
+</footer>
+
+<!-- -------------------------------------------------------- -->
+  
+<!-- link js bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>   
 
 </body>
