@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <title>Contatos</title>
     
     <!-- link fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
 </head>
 <body>
 
-    <!-- navbar do bootstrap -->
+<!-- ------------------------- Navbar ------------------------- -->
 
     <!-- faltam os links dos botões para as outras páginas! -->
 
@@ -51,12 +51,44 @@
         </div>
       </nav>
 
-      <!-- Main Contatos section -->
+<!-- ------------------------- Contatos 01 ------------------------- -->
 
     <section class="contatos d-flex align-items-center justify-content-center text-white"> <!-- d-flex: define como flex container -->
 
         <div class="contatos-metade-esquerda">
-            <form action=""></form>
+
+          <div class="container-formulario">
+
+            <form action="processa.php" method="POST">
+                <h2>Entre em contacto comigo:</h2>
+                <div class="formularioLinha">
+                    <div class="formularioGrupo">
+                      <label for="nome">Nome</label>
+                      <input type="text" id="nome" name="nome" placeholder="João">
+                    </div>
+                    <div class="formularioGrupo">
+                      <label for="sobrenome">Apelido/Sobrenome</label>
+                      <input type="text" id="sobrenome" name="sobrenome" placeholder="Silva">
+                    </div>
+                  </div>
+              
+                  <div class="formularioGrupo">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="nome@email.net">
+                  </div>
+              
+                  <div class="formularioGrupo">
+                    <label for="mensagem">Sua mensagem</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui"></textarea>
+                  </div>
+              
+                  <input type="enviar" value="Enviar">
+                </form>
+            </form>
+        
+            </div>
+            
+
         </div>
        
         <div class="contatos-metade-direita">
@@ -72,37 +104,41 @@
 
 
 
- <!-- Rodapé -->
- <footer>
+ <!-- ------------------------- Footer ------------------------- -->
+ 
+  <footer>
 
-    <div class="footer-texto-1">
-      <p>LIVING AROUND</p>
+  <div class="footer-texto-1">
+    <p>LIVING AROUND</p>
+  </div>
+
+    <!-- Icones de Redes Sociais -->
+
+    <div class="social-icons">
+      <a href="https://facebook.com/yourprofile" target="_blank" class="social-icon">
+        <img src="Imagens/Icones/FacebookIcon.svg" alt="Facebook" />
+      </a>
+  
+      <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon">
+        <img src="Imagens/Icones/InstagramIcon.svg" alt="Instagram" />
+      </a>
+  
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-icon">
+        <img src="Imagens/Icones/XIcon.svg" alt="X" />
+      </a>
     </div>
 
-      <!-- Icones de Redes Sociais -->
 
-      <div class="social-icons">
-        <a href="https://facebook.com/yourprofile" target="_blank" class="social-icon">
-          <img src="Imagens/Icones/FacebookIcon.svg" alt="Facebook" />
-        </a>
-    
-        <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon">
-          <img src="Imagens/Icones/InstagramIcon.svg" alt="Instagram" />
-        </a>
-    
-        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-icon">
-          <img src="Imagens/Icones/XIcon.svg" alt="X" />
-        </a>
-      </div>
-
-
-    <div class="footer-texto-2">
-      <p>Power by Cesae Digital</p>
-    </div>
+  <div class="footer-texto-2">
+    <p>Power by Cesae Digital</p>
+  </div>
 
   </footer>
-  
+
+<!-- -------------------------------------------------- -->
+
 <!-- link bootstrap js -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>   
+
 </body>
 </html>

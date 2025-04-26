@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acomodação</title>
+
+    <!-- link fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jura:wght@300..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Jura:wght@300..700&display=swap" rel="stylesheet">
+
+
+    <!-- link bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    
+    <!-- link para css file -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <header>
+
+<!-- ------------------------- Navbar ------------------------- -->
+
+<!-- faltam os links dos botões para as outras páginas! -->
+
+    <nav class="navbar navbar-expand-lg bg-transparent py-3" style="background: none; position: absolute; width: 100%; z-index: 5;"> <!-- usar o style="background: none" foi a única maneira que encontrei de deixar a navbar sobreposta à imagem da Hero section; py-3 ajusta a posição em relação ao topo da pagina; p é de padding, y é de eixo y (vertical) e corresponde a um padding-top + padding-bottom -->
+        <div class="container-fluid justify-content-end"> <!-- justify-content-end mantem o conteúdo alinhado à direita -->
+          
+            <!-- Logo a esquerda -->
+    <a href="index.html" class="navbar-brand">
+        <img src="Imagens/Icones/Logo.svg" alt="Logo" style="height: 50px; filter: brightness(0) saturate(100%) invert(0);"> <!-- usar o filter para deixar o logo escuro -->
+      </a>
+
+            <!-- Navbar links a direita -->
+
+          <ul class="navbar-nav ms-auto d-flex flex-row gap-4"> <!-- gap-4 define um espaço determinado entre os elementos filhos dentro do flex container (equivalente ao gap no css); ms-auto (margin-start auto) também mantém o conteúdo alinhado à direta ao ocupar todo o espaço disponível a partir da margem esquerda (reduntante?) -->
+            <li class="nav-item">
+              <a class="nav-link px-3" style="color: #000000;" href="#">Acomodação</a> <!-- px (semelhante ao py) corresponde a padding no eixo horizontal, e equivale a um padding-left + padding-right -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" style="color: #000000;" href="#">Locais</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" style="color: #000000;" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-3" style="color: #000000;" href="#">Contatos</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+
+<!-- ------------------------- Acomodacao 01 ------------------------- -->
+
+    <section class="acomodacao01">
+
+      <div class="acomodacao01-div01">
+          <p class="acomodacao01-div01-texto">O SEU NOVO OFFICE</p>
+      </div>
+
+  </section>
+
+  </header>
+
+  <main>
+
+<!-- ------------------------- Acomodação 02 ------------------------- -->
+    
+      <section class="acomodacao02">
+
+            <!-- -------------------- Cards -------------------- -->
+
+
+        <div class="row row-cols-1 row-cols-md-2 g-5">
+
+            <!-- card 1 -->
+            <div class="col">
+              <article class="card mx-auto p-2 rounded-5" style="box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.311);">
+                  <img src="Imagens/card1.png" class="card-img-top rounded-5" alt="imagem de uma kombi vista de frente">
+                  <div class="card-body text-start">
+                      <h1 class="fs-2 fw-bold text-center">Hippie Ride</h1>
+                      <p class="text-start">A partir de 50€/dia</p>
+                      <p class="card-text p-0 m-0">Equipada com:</p>
+                      <ul>
+                          <li>Cozinha equipada;</li>
+                          <li>Cama de casal;</li>
+                          <li>WC portátil;</li>
+                          <li>Carregador USB;</li>
+                      </ul>
+                  </div>
+                  <button type="button" class="btn btn-black text-black open-modal-btn border-0" data-bs-toggle="modal"
+                      data-bs-target="#infoModal" data-title="Hippie Ride" data-image="Imagens/card1.png"
+                      data-description-url="modalHippieRide.html">
+                      + info
+                  </button>
+              </article>
+          </div>
+
+          <!-- card 2 -->
+          <div class="col">
+              <article class="card mx-auto p-2 rounded-5" style="box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.311);">
+                  <img src="Imagens/card2.png" class="card-img-top rounded-5" alt="imagem de uma caravana estacionada em meio a árvores vista de lado">
+                  <div class="card-body text-start">
+                      <h1 class="fs-2 fw-bold text-center">Harvest Ride</h1>
+                      <p class="text-start">A partir de 80€/dia</p>
+                      <p class="card-text p-0 m-0">Equipada com:</p>
+                      <ul>
+                          <li>Cozinha equipada;</li>
+                          <li>Cama de casal;</li>
+                          <li>WC portátil;</li>
+                          <li>Carregador USB;</li>
+                      </ul>
+                  </div>
+                  <button type="button" class="btn btn-black text-black open-modal-btn border-0" data-bs-toggle="modal"
+                      data-bs-target="#infoModal" data-title="Harvest Ride" data-image="Imagens/card2.png"
+                      data-description-url="modalHarvestRide.html">
+                      + info
+                  </button>
+              </article>
+          </div>
+
+          <!-- card 3 -->
+          <div class="col">
+              <article class="card mx-auto p-2 rounded-5" style="box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.311);">
+                  <img src="Imagens/card3.png" class="card-img-top rounded-5" alt="imagem de uma caravana estacioana em um campo vista de lado">
+                  <div class="card-body text-start">
+                      <h1 class="fs-2 fw-bold text-center">Nomade Ride</h1>
+                      <p class="text-start">A partir de 100€/dia</p>
+                      <p class="card-text p-0 m-0">Equipada com:</p>
+                      <ul>
+                          <li>Cozinha equipada;</li>
+                          <li>Cama de casal;</li>
+                          <li>WC portátil;</li>
+                          <li>Carregador USB;</li>
+                      </ul>
+                  </div>
+                  <button type="button" class="btn btn-black text-black open-modal-btn border-0" data-bs-toggle="modal"
+                      data-bs-target="#infoModal" data-title="Nomade Ride" data-image="Imagens/card3.png"
+                      data-description-url="modalNomadeRide.html">
+                      + info
+                  </button>
+              </article>
+          </div>
+
+          <!-- card 4 -->
+          <div class="col">
+              <article class="card mx-auto p-2 rounded-5" style="box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.311);">
+                  <img src="Imagens/card4.png" class="card-img-top rounded-5" alt="imagem de uma caravana na estrada vista de costas">
+                  <div class="card-body text-start">
+                      <h1 class="fs-2 fw-bold text-center">Family Ride</h1>
+                      <p p class="text-start">A partir de 50€/dia</p>
+                      <p class="card-text p-0 m-0">Equipada com:</p>
+                      <ul>
+                          <li>Cozinha equipada;</li>
+                          <li>Cama de casal;</li>
+                          <li>WC portátil;</li>
+                          <li>Carregador USB;</li>
+                      </ul>
+                  </div>
+                  <button type="button" class="btn btn-black text-black open-modal-btn border-0" data-bs-toggle="modal"
+                      data-bs-target="#infoModal" data-title="Family Ride" data-image="Imagens/card4.png"
+                      data-description-url="modalFamilyRide.html">
+                      + info
+                  </button>
+              </article>
+          </div>
+
+          <!-- card 5 -->
+          <div class="col">
+              <article class="card mx-auto p-2 rounded-5" style="box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.311);">
+                  <img src="Imagens/card5.png" class="card-img-top rounded-5" alt="imagem de uma caravana estacionada em frente a praia, vista de costas">
+                  <div class="card-body text-start">
+                      <h1 class="fs-2 fw-bold text-center">Surf Ride</h1>
+                      <p class="text-start">A partir de 80€/dia</p>
+                      <p class="card-text p-0 m-0">Equipada com:</p>
+                      <ul>
+                          <li>Cozinha equipada;</li>
+                          <li>Cama de casal;</li>
+                          <li>WC portátil;</li>
+                          <li>Carregador USB;</li>
+                      </ul>
+                  </div>
+                  <button type="button" class="btn btn-black text-black open-modal-btn border-0" data-bs-toggle="modal"
+                      data-bs-target="#infoModal" data-title="Surf Ride" data-image="Imagens/card5.png"
+                      data-description-url="modalSurfRide.html">
+                      + info
+                  </button>
+              </article>
+          </div>
+
+          <!-- card 6 -->
+          <div class="col">
+              <article class="card mx-auto p-2 rounded-5" style="box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.311);">
+                  <img src="Imagens/card6.png" class="card-img-top rounded-5" alt="imagem de uma caravana estacionada em frente a praia, vista de lado">
+                  <div class="card-body text-start">
+                      <h1 class="fs-2 fw-bold text-center">Cave Ride</h1>
+                      <p class="text-start">A partir de 30€/dia</p>
+                      <p class="card-text p-0 m-0">Equipada com:</p>
+                      <ul>
+                          <li>Cozinha equipada;</li>
+                          <li>Cama de casal;</li>
+                          <li>WC portátil;</li>
+                          <li>Carregador USB;</li>
+                      </ul>
+                  </div>
+                  <button type="button" class="btn btn-black text-black open-modal-btn border-0" data-bs-toggle="modal"
+                      data-bs-target="#infoModal" data-title="Cave Ride" data-image="Imagens/card6.png"
+                      data-description-url="modalCaveRide.html">
+                      + info
+                  </button>
+              </article>
+          </div>
+
+        </div>
+
+          <!-- Modal -->
+        <div class="modal fade" id="infoModal" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content rounded-5">
+                  <div class="modal-header">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body text-center"
+                      style="font-family: 'Jura', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+                      <img id="modalImage" src="" alt="Imagem" class="img-fluid rounded-4 mb-3" />
+                      <h5 id="modalTitle" class="fw-bold"></h5>
+                      <div id="modalDescription" class="mt-3 text-start" style="text-align: justify;"></div>
+                  </div>
+                  <div class="modal-footer justify-content-center">
+                      <button type="button" class="btn btn-secondary text-black" data-bs-dismiss="modal"
+                          style="background-color: #686931; font-family: 'Jura', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; border-width: 3px; border-radius: 15px; padding: 10px 80px">
+                          Alugar
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      </section>
+
+  </main>
+
+<!-- ------------------------- Footer ------------------------- -->
+ 
+<footer>
+
+    <div class="footer-texto-1">
+      <p>LIVING AROUND</p>
+    </div>
+  
+      <!-- Icones de Redes Sociais -->
+  
+      <div class="social-icons">
+        <a href="https://facebook.com/yourprofile" target="_blank" class="social-icon">
+          <img src="Imagens/Icones/FacebookIcon.svg" alt="Facebook" />
+        </a>
+    
+        <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon">
+          <img src="Imagens/Icones/InstagramIcon.svg" alt="Instagram" />
+        </a>
+    
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-icon">
+          <img src="Imagens/Icones/XIcon.svg" alt="X" />
+        </a>
+      </div>
+  
+  
+    <div class="footer-texto-2">
+      <p>Power by Cesae Digital</p>
+    </div>
+  
+    </footer>
+  
+  <!-- -------------------------------------------------- -->
+
+  <!-- js para o modal do card 1 -->
+  <script src="script.js"></script>
+
+  <!-- link js bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>   
+
+</body>
+</html>
