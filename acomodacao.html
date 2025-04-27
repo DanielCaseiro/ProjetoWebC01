@@ -24,35 +24,39 @@
 
 <!-- ------------------------- Navbar ------------------------- -->
 
-<!-- faltam os links dos botões para as outras páginas! -->
+<nav class="navbar navbar-expand-lg bg-transparent py-3" style="background: none; position: absolute; width: 100%; z-index: 2;">
+    <div class="container-fluid justify-content-end">
 
-    <nav class="navbar navbar-expand-lg bg-transparent py-3" style="background: none; position: absolute; width: 100%; z-index: 5;"> <!-- usar o style="background: none" foi a única maneira que encontrei de deixar a navbar sobreposta à imagem da Hero section; py-3 ajusta a posição em relação ao topo da pagina; p é de padding, y é de eixo y (vertical) e corresponde a um padding-top + padding-bottom -->
-        <div class="container-fluid justify-content-end"> <!-- justify-content-end mantem o conteúdo alinhado à direita -->
-          
-            <!-- Logo a esquerda -->
+      <!-- Button to toggle the navbar on smaller screens -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Logo a esquerda -->
     <a href="index.html" class="navbar-brand">
-        <img src="Imagens/Icones/Logo.svg" alt="Logo" style="height: 50px; filter: brightness(0) saturate(100%) invert(0);"> <!-- usar o filter para deixar o logo escuro -->
+        <img src="Imagens/Icones/Logo.svg" alt="Logo" style="height: 50px; filter: brightness(0) saturate(100%) invert(0); margin: 20px;"> <!-- usar o filter para deixar o logo escuro -->
       </a>
 
             <!-- Navbar links a direita -->
-
-          <ul class="navbar-nav ms-auto d-flex flex-row gap-4"> <!-- gap-4 define um espaço determinado entre os elementos filhos dentro do flex container (equivalente ao gap no css); ms-auto (margin-start auto) também mantém o conteúdo alinhado à direta ao ocupar todo o espaço disponível a partir da margem esquerda (reduntante?) -->
-            <li class="nav-item">
-              <a class="nav-link px-3" style="color: #000000;" href="acomodacao.html">Acomodação</a> <!-- px (semelhante ao py) corresponde a padding no eixo horizontal, e equivale a um padding-left + padding-right -->
-            </li>
-            <li class="nav-item">
-              <a class="nav-link px-3" style="color: #000000;" href="locais.html">Locais</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link px-3" style="color: #000000;" href="blog.html">Blog</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link px-3" style="color: #000000;" href="contatos.html">Contatos</a>
-              </li>
-          </ul>
-        </div>
-      </nav>
-
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto d-flex flex-row gap-4">
+          <li class="nav-item">
+            <a class="nav-link text-dark px-3" href="acomodacao.html">Acomodação</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark px-3" href="locais.html">Locais</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark px-3" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark px-3" href="contatos.html">Contatos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
 <!-- ------------------------- Acomodacao 01 ------------------------- -->
 
     <section class="acomodacao01">

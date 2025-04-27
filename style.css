@@ -8,20 +8,43 @@
 
 
 /* ------------------------- Navbar ------------------------- */
-
 .navbar {
-
-    font-family: "Jura", sans-serif;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 1.18;
-    letter-spacing: 0em;
-    background-color: transparent !important;
+  font-family: "Jura", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 1.18;
+  letter-spacing: 0em;
+  background-color: transparent !important;
 }
 
 .navbar .container-fluid {
-    background-color: transparent !important;
+  background-color: transparent !important;
+}
+
+/* On mobile devices, stack navbar items and center them */
+@media (max-width: 992px) {
+  .navbar-nav {
+    flex-direction: column; /* Stack the navbar items vertically */
+    text-align: center; /* Center align the items */
+    gap: 1rem; /* Add some spacing between items */
   }
+
+  .navbar-nav .nav-item {
+    width: 100%; /* Make each item take full width */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 20px; /* Adjust font size for smaller screens */
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    font-size: 18px; /* Further reduce font size for smaller mobile screens */
+  }
+}
 
 
 
@@ -78,7 +101,7 @@ footer{
 
 /* ------------------------- Index ------------------------- */
 
-    /* Hero Section */
+/* ----- Index 01 - Hero ----- */
 
 .hero-section {
     height: 100vh; /* 100% do viewport height */
@@ -102,25 +125,26 @@ footer{
     color: white; 
   }
 
-  /* Section 02 */
+/* ----- Index 02 ----- */
 
-  .section02{
+  .index02{
     background-color:#B49B2C40;
     width: 100%;
-    height: 570px;
+    min-height: 570px;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     padding: 0 2vw;
   }
 
-  .section02-metade-esquerda{
+  .index02-metade-esquerda{
     width: 50%; /* faz essa div ocupar metade da felxbox */
     display: grid;
     place-items: center;
     padding: 2vw;
   }
 
-  .section02-metade-esquerda-texto{
+  .index02-metade-esquerda-texto{
     font-family: "Jura",sans-serif;
     font-weight: 400;
     font-size: clamp(28px, 2.5vw, 45px); /* clamp para dar maior responsividade */
@@ -128,33 +152,39 @@ footer{
     letter-spacing: 0.2em;
   }
 
-  .section02-metade-esquerda-texto-destaque {
+  .index02-metade-esquerda-texto-destaque {
     font-weight: 700;
     color: #686931;
   }
 
-  .section02-divisoria {
+  .index02-divisoria {
     width: 1px;
     background-color: black;
     height: 60%;
     align-self: center;
+    z-index: 100;
 }
 
-.section02-metade-direita {
+.index02-metade-direita {
   width: 50%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 20px;
+  padding: 80px;
 }
 
 .remote-work-section {
-  position: relative; /* Keep this - the corners will be relative to this */
+  position: relative;
   text-align: center;
   padding: 40px 30px;
   background-color: transparent;
   height: fit-content;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 20px;
+  box-sizing: border-box;
 }
 
 .section-title {
@@ -180,46 +210,46 @@ footer{
   line-height: 2;
 }
 
-.corner {
+.corner-top-left {
   width: 40px;
   height: 40px;
-  border: solid black;
-  position: absolute; /* Keep this */
-}
-
-.corner-top-left {
-  top: -10px; /* Adjust to move it slightly outside the padding */
-  left: -10px; /* Adjust to move it slightly outside the padding */
-  border-width: 0 0 8px 8px;
+  border-left: 8px solid black;
+  border-top: 8px solid black;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .corner-bottom-right {
-  bottom: -10px; /* Adjust to move it slightly outside the padding */
-  right: -10px; /* Adjust to move it slightly outside the padding */
-  border-width: 8px 8px 0 0;
+  width: 40px;
+  height: 40px;
+  border-right: 8px solid black;
+  border-bottom: 8px solid black;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
  
-  /* Section 03 */
+/* ----- Index 03 ----- */
 
-  .section03{
+  .index03{
     width: 100%;
     height: 440px;
     display: flex;
     background-color: black;
   }
 
-  .section03-metade-esquerda{
+  .index03-metade-esquerda{
     flex: 1;
-    max-width: 50%;
-  }
-  
-  .section03-metade-esquerda img {
-    width: 100%;
-    height: auto;
-    display: block;
+    width: 50%;
+    background-image: url(Imagens/pexels-gya-den-768256-2303781\ 2.png);
+    background-size: cover;       /* Para preencher toda a area disponível */
+    background-position: bottom;
+    background-repeat: no-repeat; /* Para impedir a imagem de se repetir/ duplicar */
   }
 
-  .section03-metade-direita {
+  .index03-metade-direita {
+    width: 50%;
     display: flex; 
     flex-direction: column;   
     flex: 1;
@@ -231,18 +261,30 @@ footer{
     letter-spacing: 0em;
     align-items: center;
     justify-content: center;
+    position: relative;
   }
 
-  /* Section 04 */
+  .scroll-to-top-btn-1 {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 100;
+  }
 
-  .section04{
+/* ----- Index 04 ----- */
+
+  .index04{
     width: 100%;
     height: 475px;
     display: flex;
     background-color:#B49B2C40;
   }
 
-  .section04-metade-esquerda {
+  .index04-metade-esquerda {
     display: flex; 
     flex-direction: column;   
     flex: 1;
@@ -254,20 +296,33 @@ footer{
     letter-spacing: 0em;
     align-items: center;
     justify-content: center;
+    position: relative;
   }
 
-  .section04-metade-direita{
+  .scroll-to-top-btn-2 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 100;
+  }
+
+  .index04-metade-direita{
     flex: 1;
-    max-width: 50%;
+    width: 50%;
+    background-image: url(Imagens/pexels-thatguycraig000-1546898\ 2.png);
+    background-size: cover;       /* Para preencher toda a area disponível */
+    background-position: bottom;
+    background-repeat: no-repeat; /* Para impedir a imagem de se repetir/ duplicar */
   }
   
-  .section04-metade-direita img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
 
-  .section05{
+  /* ----- Index 05 ----- */
+
+  .index05{
     width: 100%;
     height: 690px;
     background-image: url("Imagens/pexels-thepaintedsquare-583848 1.png");
@@ -281,13 +336,13 @@ footer{
     position: relative;
   }
 
-  .section05 img {
+  .index05 img {
     width: 100%;
     height: auto;
     display: block;
   }
 
-/* Customização dos botões */
+/* ----- Customização dos botões ----- */
 
 .btn-custom-1 {
   width: auto;
@@ -311,6 +366,81 @@ footer{
   filter: brightness(1.2);
 }
 
+/* ----- Media Query ----- */
+
+@media (min-width: 1024px) {
+  .index02-divisoria {
+    height: 400px; /* Ensure it stays visible on large screens */
+    width: 1px;
+    z-index: 200;
+    background-color: #000;
+  }
+}
+
+@media (max-width: 768px) {
+  .index02 {
+    flex-direction: column;
+    min-height: auto; /* Adjust height */
+}
+
+.index02-divisoria {
+    width: 100%; /* Adjust width for smaller screens */
+    height: 1px;
+    margin: 20px 0;
+}
+
+.index02-metade-esquerda,
+.index02-metade-direita {
+    width: 100%; /* Ensure full width */
+    padding: 10px;
+}
+}
+
+@media (min-width: 1024px) {
+.btn-custom-1 {
+  width: 309px;
+  height: 77px;
+}
+}
+
+@media (min-width: 1024px) {
+.btn-custom-2 {
+  width: 309px;
+  height: 77px;
+}
+}
+
+@media (max-width: 768px) { /* 768px is a common breakpoint for tablets */
+  .index02 {
+      flex-direction: column;
+  }
+
+  .index02-divisoria {
+      width: 60%;
+      height: 1px;
+      margin: 20px 0;
+  }
+
+  .hero-section h1 {
+    font-size: clamp(50px, 10vw, 85px); /* Adjust font size for small screens */
+  }
+
+  /* Add smaller padding to the sections */
+  .index02, .index03, .index04, .index05 {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .btn-custom-1 {
+    width: 309px;
+    height: 77px;
+  }
+  .btn-custom-2 {
+    width: 309px;
+    height: 77px;
+  }
+}
 
 
 /* ------------------------- Acomodação ------------------------- */
@@ -351,6 +481,8 @@ justify-content: center;
   width: 100%;
   padding: 50px;
   font-family: "Jura", sans-serif;
+  padding-top: 80px;
+  padding-bottom: 80px;
   /* font-weight: 700;
   font-size: 20px;
   line-height: 1.18;
@@ -385,6 +517,7 @@ justify-content: center;
   align-items: center;
   align-content: center;
   justify-content: center;
+  position: relative;
   }
 
   .locais01::before {
@@ -407,16 +540,6 @@ justify-content: center;
   z-index: 2;
   }
 
-  .locais01-metade-esquerda-formulario {
-  width: 40%;
-  height: 60vh;
-  max-width: 600px;  
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  /*background-color: #D9D9D9; --- já definido na tag form com a sintaxe do bootstrap
-  border-radius: 30px; */
-  }
 
   .locais01-metade-esquerda-formulario form {
     display: flex;
@@ -428,12 +551,51 @@ justify-content: center;
 
   .locais01-metade-direita {
   width: 50%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   padding: 20px;
   z-index: 2;
+  }
+
+  /* ----- Media Query ----- */
+
+
+  @media (max-width: 992px) {
+    /* Stack the sections on medium and small screens */
+    .locais01-metade-esquerda, .locais01-metade-direita {
+      width: 100%; /* Make them full-width */
+      padding: 15px; /* Add padding for better spacing */
+    }
+  
+    .locais01-metade-esquerda-formulario form {
+      width: 100%; /* Make form take full width on smaller screens */
+      height: auto; /* Adjust height to fit content */
+      margin-top: 150px;
+    }
+  
+    /* Adjust iframe height for smaller screens */
+    #mapContainer iframe {
+      height: 250px; /* Reduce height on smaller screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    /* On very small screens (like mobile) */
+    .locais01-metade-esquerda-formulario form {
+      width: 90%; /* Make the form slightly smaller to fit the screen */
+    }
+  
+    #mapContainer iframe {
+      height: 200px; /* Further reduce iframe height */
+    }
+  
+    .locais01-metade-direita address {
+      font-size: 14px; /* Adjust font size for smaller screens */
+      padding: 10px; /* Reduce padding */
+    }
   }
 
 
@@ -447,9 +609,7 @@ justify-content: center;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    flex-direction: row;
     position: relative;
 }
 
@@ -474,9 +634,10 @@ justify-content: center;
   flex-direction: column;
   padding: 30px;
   flex-wrap: wrap;
-
+  position: relative;
+  top: 150px;    /* Distance from the top (e.g., below the navbar) */
+  left: 300px;
 }
-
 
 
 input[type="text"],
@@ -530,24 +691,80 @@ input[type="enviar"]:hover {
   z-index: 2;
 }
 
-.contatos-texto-1 {
+.contatos-metade-direita figure {
   position: absolute;
+  top: 200px;    /* Distance from the top (e.g., below the navbar) */
+  right: 60px;  /* Distance from the right edge */
+  margin: 0;    /* Reset margin if needed */
+  font-family: 'Jura', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  justify-content: center;
 }
 
-@media (min-width: 1200px) {
-  .contatos-texto-1 {
-    top: -180px;
-    left: 350px;
+/* ------------------------- Media Queries ------------------------- */
+
+@media (max-width: 992px) {
+  .contatos {
+    flex-direction: column; /* Stack sections vertically on small screens */
+    min-height: 120vh; /* Taller section to provide more space */
+    background-color: black; /* Add a black background for empty space below */
+  }
+
+  .contatos-divisoria {
+    background-color: black; /* Ensure separator is black */
+  }
+
+  .container-formulario {
+    top: 50px; /* Adjust vertical position */
+    left: 10px; /* Adjust left positioning */
+    padding: 15px; /* Reduce padding */
+    max-width: 250px; /* Smaller form width */
+  }
+
+  .contatos-metade-direita {
+    min-height: 100px; /* Ensure quote has enough space */
+  }
+
+  .contatos-metade-direita figure {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 10px auto; /* Center quote */
+    font-size: 14px;
   }
 }
 
+@media (max-width: 576px) {
+  .contatos {
+    min-height: 150vh; /* Ensure taller section on small screens */
+    background-color: black; /* Add a black background for empty space below */
+  }
 
+  .contatos-divisoria {
+    height: 20vh; /* 20% height of screen */
+    background-color: black;
+  }
+
+  .container-formulario {
+    top: 150px; /* Adjust form positioning */
+    padding: 10px; /* Further reduce padding */
+    max-width: 200px; /* Further reduce width */
+  }
+
+  .contatos-metade-direita {
+    min-height: 100px;
+  }
+
+  .contatos-metade-direita figure {
+    margin: 10px auto; /* Center quote */
+    font-size: 12px; /* Reduce font size */
+  }
+}
 
 /* ------------------------- Blog ------------------------- */
 
 .blog01 {
   min-height: 100vh; /* 100% of the viewport height */
-  background-image:url(Imagens/rv-2788677_1280.jpg);
+  background-image:url(Imagens/pexels-caravana-blog.jpeg);
   background-size: cover;       /* Para preencher toda a area disponível */
   background-position: center;
   background-repeat: no-repeat; /* Para impedir a imagem de se repetir/ duplicar */
@@ -594,33 +811,8 @@ input[type="enviar"]:hover {
     font-style: normal;
   }
 
-  /* media query*/
 
-  @media (max-width: 768px) {
-    .section02 {
-        flex-direction: column;
-    }
 
-    .section02-divisoria {
-        width: 60%;
-        height: 1px;
-        margin: 20px 0;
-    }
-}
-
-@media (min-width: 1024px) {
-  .btn-custom-1 {
-    width: 309px;
-    height: 77px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .btn-custom-2 {
-    width: 309px;
-    height: 77px;
-  }
-}
 
 
 

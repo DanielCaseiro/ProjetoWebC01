@@ -1,3 +1,15 @@
+
+/* Botão seta para cima na página Index */
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+
+
 /* Modal da página Acomodação */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -79,6 +91,6 @@ function showMapSection() {
       mapSection.style.display = "block"; // Show the map div
   } else {
       mapSection.style.display = "none";
-      alert("Por favor selecione Portugal e Porto para ver o mapa.");
+      alert("Por favor, selecione Portugal e Porto para ver o mapa.");
   }
 }
